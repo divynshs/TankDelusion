@@ -43,10 +43,10 @@ public class EnemyLightController : MonoBehaviour {
 	}
 
 	void DecHP () {
-		hitPoints--;
-		if (hitPoints <= 0) {
+		if (hitPoints < 0) {
 			Destroy (gameObject);
 			gameController.AddScore (score);
 		}
+		hitPoints--;
 	}
 }

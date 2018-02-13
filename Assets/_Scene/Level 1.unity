@@ -261,34 +261,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 433792555}
---- !u!1 &509659466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 509659467}
-  m_Layer: 0
-  m_Name: Walls
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &509659467
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 509659466}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2671442, y: 0.676095, z: -0.44901705}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &517041828
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +294,7 @@ MonoBehaviour:
   - {fileID: 1543908506880224, guid: dad45620e73a38041a1ad4391dee9be3, type: 2}
   - {fileID: 1840065661676600, guid: f396743ca22d7b34cbfee515ea2272cd, type: 2}
   knifeEnemy: {fileID: 1490812293887772, guid: acc8778a251413849bf45b47795684b4, type: 2}
-  spawnValues: {x: 11, y: 0, z: 10}
+  spawnValues: {x: 12, y: 0, z: 12}
   ScoreText: {fileID: 816835638}
   LivesText: {fileID: 433792557}
   SelectLevelText: {fileID: 16309043}
@@ -344,7 +316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &567903469
 GameObject:
@@ -428,7 +400,7 @@ Transform:
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &793588428
 GameObject:
@@ -521,7 +493,7 @@ RectTransform:
   - {fileID: 1108653395}
   - {fileID: 824345361}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1112,7 +1084,7 @@ Transform:
   m_Children:
   - {fileID: 1147512934}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1766039672
 Rigidbody:
@@ -1150,7 +1122,7 @@ MonoBehaviour:
     zMax: 8.5
   durationPowerUp: 2
   shot: {fileID: 1660145033528548, guid: 1ba4e658568cdf2478e09e7521f7e84d, type: 2}
-  superShot: {fileID: 1072486866663302, guid: 881608ecaf9423949ab14a43cc732bb4, type: 2}
+  superShot: {fileID: 1754600811170310, guid: 881608ecaf9423949ab14a43cc732bb4, type: 2}
   shotSpawn: {fileID: 2134882386}
   fireRate: 0.2
 --- !u!1 &2134882385
