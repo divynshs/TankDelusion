@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
 	public GameObject player;
 	public GameObject[] bonuses;
-	public GameObject lightEnemy;
+	public GameObject knifeEnemy;
 
 	public Vector3 spawnValues;
 	public Text ScoreText; 
@@ -170,22 +170,22 @@ public class GameController : MonoBehaviour
 				if (j == 0) {
 					direction = player.transform.position - topSpawnPosition;
 					Quaternion spawnRotation = Quaternion.LookRotation (direction);
-					Instantiate (lightEnemy, topSpawnPosition, spawnRotation);
+					Instantiate (knifeEnemy, topSpawnPosition, spawnRotation);
 				}
 				if (j == 1) {
 					direction = player.transform.position - bottomSpawnPosition;
 					Quaternion spawnRotation = Quaternion.LookRotation (direction);
-					Instantiate (lightEnemy, bottomSpawnPosition, spawnRotation);
+					Instantiate (knifeEnemy, bottomSpawnPosition, spawnRotation);
 				}
 				if (j == 2) {
 					direction = player.transform.position - leftSpawnPosition;
 					Quaternion spawnRotation = Quaternion.LookRotation (direction);
-					Instantiate (lightEnemy, leftSpawnPosition, spawnRotation);
+					Instantiate (knifeEnemy, leftSpawnPosition, spawnRotation);
 				}
 				if (j == 3) {
 					direction = player.transform.position - rightSpawnPosition;
 					Quaternion spawnRotation = Quaternion.LookRotation (direction);
-					Instantiate (lightEnemy, rightSpawnPosition, spawnRotation);
+					Instantiate (knifeEnemy, rightSpawnPosition, spawnRotation);
 				}
 				yield return new WaitForSeconds (spawnWait);
 			}
