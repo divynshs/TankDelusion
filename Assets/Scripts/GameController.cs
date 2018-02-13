@@ -142,7 +142,7 @@ public class GameController : MonoBehaviour
 		while (true) {
 			yield return new WaitForSeconds (2 * startWait);
 			for (int i = 0; i < Random.Range(1, bonusCount); i++) {
-				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, Random.Range(-spawnValues.z, spawnValues.z));
+				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x+3, spawnValues.x-3), spawnValues.y, Random.Range(-spawnValues.z+4, spawnValues.z-4));
 				Quaternion spawnRotation = Quaternion.identity;
 				GameObject bonus = bonuses [Random.Range (0, bonuses.Length)];
 				Instantiate (bonus, spawnPosition, spawnRotation);
