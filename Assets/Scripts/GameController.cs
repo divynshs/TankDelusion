@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 	public GameObject player;
 	public GameObject[] bonuses;
 	public GameObject knifeEnemy;
+	public GameObject lightEnemy;
 
 	public Vector3 spawnValues;
 	public Text ScoreText; 
@@ -45,7 +46,8 @@ public class GameController : MonoBehaviour
 		if (levelSelected) {
 			 SelectLevelText.text = "";
 			StartCoroutine (SpawnBonusWaves ());
-			StartCoroutine (SpawnEnemyWaves ());
+			StartCoroutine (SpawnKnifeWaves ());
+			StartCoroutine (SpawnLightWaves ());
 		}
 	} 
 
@@ -157,7 +159,7 @@ public class GameController : MonoBehaviour
 		}
 	}
 
-	IEnumerator SpawnEnemyWaves() {
+	IEnumerator SpawnKnifeWaves() {
 		while (true) {
 			yield return new WaitForSeconds (startWait);
 			for (int i = 0; i < enemyCount; i++) {
@@ -198,7 +200,51 @@ public class GameController : MonoBehaviour
 		}
 	}
 
+	IEnumerator SpawnLightWaves() {
+		while (true) {
+			yield return new WaitForSeconds (2*startWait);
+			for (int i = 0; i < enemyCount/2; i++) {
+				Vector3 topSpawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+				Vector3 bottomSpawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, -spawnValues.z);
+				Vector3 leftSpawnPosition = new Vector3 (-spawnValues.x, spawnValues.y, Random.Range (-spawnValues.z, spawnValues.z));
+				Vector3 rightSpawnPosition = new Vector3 (spawnValues.x, spawnValues.y, Random.Range (-spawnValues.z, spawnValues.z));
+				Vector3 direction;
+				int j = Random.Range (0, 3);
+				if (j == 0) {
+					direction = player.transform.position - topSpawnPosition;
+					Quaternion spawnRotation = Quaternion.LookRotation (direction);
+					Instantiate (lightEnemy, topSpawnPosition, spawnRotation);
+				}
+				if (j == 1) {
+					direction = player.transform.position - bottomSpawnPosition;
+					Quaternion spawnRotation = Quaternion.LookRotation (direction);
+					Instantiate (lightEnemy, bottomSpawnPosition, spawnRotation);
+				}
+				if (j == 2) {
+					direction = player.transform.position - leftSpawnPosition;
+					Quaternion spawnRotation = Quaternion.LookRotation (direction);
+					Instantiate (lightEnemy, leftSpawnPosition, spawnRotation);
+				}
+				if (j == 3) {
+					direction = player.transform.position - rightSpawnPosition;
+					Quaternion spawnRotation = Quaternion.LookRotation (direction);
+					Instantiate (lightEnemy, rightSpawnPosition, spawnRotation);
+				}
+				yield return new WaitForSeconds (2*spawnWait);
+			}
+			yield return new WaitForSeconds (2*waveWait);
+
+			if (gameOver) {
+				Restart ();
+				break;
+			}
+		}
+	
+	}
+
 	void Update() {
+		if (Input.GetKeyDown (KeyCode.Escape))
+			Application.Quit ();
 		if (restart) {
 			if (Input.GetKeyDown (KeyCode.R))
 				Application.LoadLevel (Application.loadedLevel);

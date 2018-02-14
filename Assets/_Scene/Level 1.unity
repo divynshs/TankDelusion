@@ -294,6 +294,7 @@ MonoBehaviour:
   - {fileID: 1543908506880224, guid: dad45620e73a38041a1ad4391dee9be3, type: 2}
   - {fileID: 1840065661676600, guid: f396743ca22d7b34cbfee515ea2272cd, type: 2}
   knifeEnemy: {fileID: 1490812293887772, guid: acc8778a251413849bf45b47795684b4, type: 2}
+  lightEnemy: {fileID: 1353095620473168, guid: d02395d39a0b897429da81cd92a9f539, type: 2}
   spawnValues: {x: 14, y: 0, z: 12}
   ScoreText: {fileID: 816835638}
   LivesText: {fileID: 433792557}
