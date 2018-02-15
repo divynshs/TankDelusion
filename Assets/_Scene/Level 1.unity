@@ -295,6 +295,7 @@ MonoBehaviour:
   - {fileID: 1840065661676600, guid: f396743ca22d7b34cbfee515ea2272cd, type: 2}
   knifeEnemy: {fileID: 1490812293887772, guid: acc8778a251413849bf45b47795684b4, type: 2}
   lightEnemy: {fileID: 1672521150229638, guid: d02395d39a0b897429da81cd92a9f539, type: 2}
+  heavyEnemy: {fileID: 0}
   spawnValues: {x: 14, y: 0, z: 12}
   ScoreText: {fileID: 816835638}
   LivesText: {fileID: 433792557}
@@ -907,7 +908,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1fb9840244855a044a1ac38802e5de5a, type: 2}
+  - {fileID: 2100000, guid: 5f73475cf0cad364b9800b85c2a229fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
