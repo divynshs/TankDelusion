@@ -294,18 +294,18 @@ MonoBehaviour:
   - {fileID: 1543908506880224, guid: dad45620e73a38041a1ad4391dee9be3, type: 2}
   - {fileID: 1840065661676600, guid: f396743ca22d7b34cbfee515ea2272cd, type: 2}
   knifeEnemy: {fileID: 1490812293887772, guid: acc8778a251413849bf45b47795684b4, type: 2}
-  lightEnemy: {fileID: 1353095620473168, guid: d02395d39a0b897429da81cd92a9f539, type: 2}
+  lightEnemy: {fileID: 1672521150229638, guid: d02395d39a0b897429da81cd92a9f539, type: 2}
   spawnValues: {x: 14, y: 0, z: 12}
   ScoreText: {fileID: 816835638}
   LivesText: {fileID: 433792557}
   SelectLevelText: {fileID: 16309043}
   GameOverText: {fileID: 1108653396}
   RestartText: {fileID: 824345362}
-  enemyCount: 10
+  enemyCount: 8
   bonusCount: 3
   startWait: 1
-  spawnWait: 1
-  waveWait: 2
+  spawnWait: 2
+  waveWait: 1
 --- !u!4 &517041830
 Transform:
   m_ObjectHideFlags: 0
@@ -1053,7 +1053,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1643119745}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 20.92, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

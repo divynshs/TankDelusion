@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyLightController : MonoBehaviour {
 
-/*	public GameObject shot;
+	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate;
-	public float delay; */
+	public float delay; 
 	public int score;
 
 	private int hitPoints;
@@ -21,10 +21,14 @@ public class EnemyLightController : MonoBehaviour {
 			gameController = gameControllerObject.GetComponent<GameController> ();
 		if (gameController == null)
 			Debug.Log ("Cannot find 'gameController' script");
+		InvokeRepeating ("Fire", delay, fireRate);
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.tag == "Bullet") {
+		if (other.CompareTag("Enemy"))
+			return;
+
+		if (other.CompareTag("Bullet") || other.CompareTag("Player")) {
 			Destroy (other.gameObject);
 			DecHP ();
 		}
@@ -48,5 +52,9 @@ public class EnemyLightController : MonoBehaviour {
 			gameController.AddScore (score);
 		}
 		hitPoints--;
+	}
+
+	void Fire() {
+		Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 	}
 }
