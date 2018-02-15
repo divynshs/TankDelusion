@@ -210,26 +210,16 @@ public class GameController : MonoBehaviour
 				Vector3 rightSpawnPosition = new Vector3 (spawnValues.x, spawnValues.y, Random.Range (-spawnValues.z, spawnValues.z));
 				Vector3 direction;
 				int j = Random.Range (0, 3);
-				if (j == 0) {
-					direction = player.transform.position - topSpawnPosition;
-					Quaternion spawnRotation = Quaternion.LookRotation (direction);
+				direction = player.transform.position - topSpawnPosition;
+				Quaternion spawnRotation = Quaternion.LookRotation (direction);
+				if (j == 0)
 					Instantiate (lightEnemy, topSpawnPosition, spawnRotation);
-				}
-				if (j == 1) {
-					direction = player.transform.position - bottomSpawnPosition;
-					Quaternion spawnRotation = Quaternion.LookRotation (direction);
+				if (j == 1)
 					Instantiate (lightEnemy, bottomSpawnPosition, spawnRotation);
-				}
-				if (j == 2) {
-					direction = player.transform.position - leftSpawnPosition;
-					Quaternion spawnRotation = Quaternion.LookRotation (direction);
+				if (j == 2)
 					Instantiate (lightEnemy, leftSpawnPosition, spawnRotation);
-				}
-				if (j == 3) {
-					direction = player.transform.position - rightSpawnPosition;
-					Quaternion spawnRotation = Quaternion.LookRotation (direction);
+				if (j == 3)
 					Instantiate (lightEnemy, rightSpawnPosition, spawnRotation);
-				}
 				yield return new WaitForSeconds (2*spawnWait);
 			}
 			yield return new WaitForSeconds (2*waveWait);
@@ -239,7 +229,6 @@ public class GameController : MonoBehaviour
 				break;
 			}
 		}
-	
 	}
 
 	void Update() {
